@@ -33,6 +33,6 @@ data['Normalized'] = data['Close'].apply(lambda x: (x*1.0)/first_price)
 data.to_csv('Results/HSBC_ytd_normalize_yf.csv', index=False)
 fig = generate_line_chart(data['Date'], data['Normalized'],
 	                       'Year-to-Date Normalized Stock Price ' + \
-	                       'of HSBC Holding (0005.HK)''',
+	                       'of HSBC Holding (0005.HK)',
 	                       'Index')
 plotly.offline.plot(fig, filename='Results/HSBC_ytd_normalized_yf.html')
