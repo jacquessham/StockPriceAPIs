@@ -45,15 +45,20 @@ Here is the direction to obtain data from either API after you have installed th
 	<li>Request data by calling .get() function from a quandl object. You may pass start date and end date to the .get() function. Also, you may pass a transformation type to .get()function if you want a transformed data set</li>
 	<li>Quandl will return the stock price of HSBC Holdings in Pandas data frame.</li>
 </ol>
+<br>
+The Quandl code must be found by searching the Quandl website.
 
 ### yfinance
 <ol>
 	<li>Import yfinance</li>
-	<li>Request data by calling .Ticker() from a yfinance object. It will return a object contains stock price with maximum available time interval from Yahoo Finance.</li>
+	<li>Request data by calling .Ticker() with a ticker from a yfinance object. Note that the ticker must be type in string with a Yahoo Finance accepted format. For HSBC Holdings (0005.HK), you will type <i>0005.HK</i>. It will return a object contains stock price with maximum available time interval from Yahoo Finance.</li>
 	<li>To obtain stock price with a time interval, call .history() from the returned object with a time interval. You may entered a string of 3mo, 6mo, ytd, 1y, 5y...etc which represents 3 months, 6 months, year-to-date, 1 year, 5 years, representively. Transformed data is not available to yfinance, you have to do it with Pandas.</li>
 	<li>Meta data or stock statistics may be obtained by calling .info() from the returned object, it returns a dictionary of meta data and statistics.</li>
 </ol>
+<br>
+Yahoo Finance accepted format ticker is a standard format of ticker defined by Yahoo Finance. For US common stocks, the format is the same with either NYSE and Nasdaq. It has a rule for foreign stock tickers. For example, if you would like to obtain stock price traded in Hong Kong. The format is XXXX.HK, while you have to type the ticker in 4 digits, followed by <i>.HK</i>. It also has special format for US indexes. It is <i>^GSPC</i> for S&P 500 and <i>^DJI</i> for Dow Jones.
 
 ## Reference
 <a href="https://docs.quandl.com/docs/python">Quandl Documentation</a>
+<br>
 <a href="https://pypi.org/project/yfinance/">yfinance Documentation</a>
