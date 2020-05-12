@@ -57,6 +57,8 @@ The Quandl code must be found by searching the Quandl website.
 </ol>
 <br>
 Yahoo Finance accepted format ticker is a standard format of ticker defined by Yahoo Finance. For US common stocks, the format is the same with either NYSE and Nasdaq. It has a rule for foreign stock tickers. For example, if you would like to obtain stock price traded in Hong Kong. The format is XXXX.HK, while you have to type the ticker in 4 digits, followed by <i>.HK</i>. It also has special format for US indexes. It is <i>^GSPC</i> for S&P 500 and <i>^DJI</i> for Dow Jones.
+<br><br>
+Note that there is a bug on calling <i>.info()</i>, to fix this, please uninstall yfinance and reinstall with <i></i>. See this <a href='https://github.com/ranaroussi/yfinance/issues/288'>post</a> for detail.
 
 ## Reference
 <a href="https://docs.quandl.com/docs/python">Quandl Documentation</a>
